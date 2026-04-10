@@ -1,11 +1,13 @@
 def get_dna_complement_from_file(file_path):
     with open(file_path, 'r') as file:
         seq = file.read()
+
     seq_lines = seq.split("\n")
     seq = ""
     for i in seq_lines:
         if ">" not in i:
             seq = seq + i
+
     seq = seq.upper()
     
     i = 0
